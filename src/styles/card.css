@@ -1,0 +1,35 @@
+.card__content {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 600ms ease-in-out;
+    width: 200px;
+    height: 200px;
+
+}
+
+.card__content--fliped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+}
+
+.card__front {
+    font-weight: bolder;
+    color: rgb(255, 255, 0);
+}
+
+.card__back {
+    color: rgb(255, 255, 0);
+    font-weight: bolder;
+    transform: rotateY(180deg);
+}
