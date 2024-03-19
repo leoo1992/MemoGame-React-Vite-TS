@@ -1,12 +1,17 @@
-.gride{
-    display: flex-grid;
-    grid-template-columns: repeat(8, 1fr);
+.gride {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: .2rem;
+    width: 100%;
+    max-width: 750px;
+    text-align: center;
     justify-content: center;
     align-items: center;
+    align-content: center;
     align-self: center;
-    text-align: center;
-    width: 100vw;
-    height: 100vh;
-    
+}
+
+.text-game {
+    width: 250px;
+    cursor: default;
 }

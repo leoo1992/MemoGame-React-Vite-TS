@@ -5,7 +5,7 @@ const keyGenarator = ():string => {
 }
 
 export const  duplicateArray = <T>(array: T[]) => {
-    return array.concat(array);
+    return [...array, ...array];
 }
 
 export const sortArray = <T>(array: T[]) => {
@@ -17,6 +17,6 @@ export const regenerateCard = (cards: CardProps[]): CardProps[] => {
 }
 
 export const arrayAdjusted = (cards: CardProps[]): CardProps[] => {
-return sortArray(regenerateCard(duplicateArray(cards)));
 
+return sortArray(regenerateCard(duplicateArray(cards)));
 }
