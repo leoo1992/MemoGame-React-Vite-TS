@@ -2,8 +2,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: .2rem;
-    width: 100%;
-    max-width: 750px;
+    max-width: 600px;
     text-align: center;
     justify-content: center;
     align-items: center;

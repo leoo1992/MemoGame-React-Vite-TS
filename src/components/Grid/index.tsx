@@ -133,7 +133,7 @@ export default function Grids({ cards }: GridProps) {
         </div>
       </div>
 
-      <div className="gride w-full p-2 bg-transparent">
+      <div className="gride w-screen p-2 bg-transparent">
         {stateCards.map((card) => {
           return <Card key={card.id} {...card} handleClick={handleClick} />;
         })}

@@ -6,9 +6,8 @@ export default function App() {
   //   console.log(id);
   // };
   return (
-    <div className="flex flex-col w-screen h-screen 
-    bg-gradient-to-br from-red-100 via-sky-50 to-blue-100
-     m-0 p-0">
+    <div className="flex flex-col w-screen h-screen m-0 p-0
+    bg-gradient-to-br from-red-100 via-sky-50 to-blue-100">
       <Grids cards={cards}/>
     </div>
   );
