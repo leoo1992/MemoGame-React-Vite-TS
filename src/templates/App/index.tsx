@@ -36,8 +36,7 @@ export default function App() {
 
   return (
     <div
-      className="flex flex-col w-screen h-screen m-0 p-0
-    bg-gradient-to-br from-red-100 via-sky-50 to-blue-100"
+      className="flex flex-col w-screen h-screen m-0 p-0"
     >
       <Grids cards={cards} />
     </div>

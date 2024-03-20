@@ -29,3 +29,9 @@
   align-self: center !important;
   align-content: center !important;
 }
+
+html{
+  background: linear-gradient(to bottom right, #FEE2E2, #d7e9fe, #FEE2E2);
+  background-size: cover;
+  background-size: 150vw 150vh;
+}

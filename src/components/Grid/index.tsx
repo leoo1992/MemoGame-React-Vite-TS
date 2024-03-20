@@ -94,10 +94,12 @@ export default function Grids({ cards }: GridProps) {
 
   return (
     <>
-      <div className="text-center font-bold p-5 m-0 ">
-        <h1 className="text-3xl text-blue-800 m-0 p-0">Jogo da Memória</h1>
+      <div className="text-center font-bold p-0 m-0 ">
+        <div className="p-1">
+          <h1 className="text-3xl text-blue-800 m-0 p-0">Jogo da Memória</h1>
+        </div>
         <div
-          className="pt-7 pb-0 m-0 flex justify-center align-middle content-center 
+          className="pt-1 pb-0 m-0 flex justify-center align-middle content-center 
         text-center font-lg rounded-lg w-auto"
         >
           <p
@@ -109,12 +111,12 @@ export default function Grids({ cards }: GridProps) {
             Acertos: {matches} de {cards.length} | Jogadas: {moves}
           </p>
         </div>
-        <div className="flex gap-2 m-0 p-0 justify-center align-middle content-center">
+        <div className="flex gap-x-2 mb-1 mt-0 p-0 justify-center align-center content-center items-center self-center align-middle">
           <button
             className={`
             mt-5 shadow-md shadow-blue-600 border-0 bg-blue-600
             hover:text-blue-900 hover:bg-orange-400 text-yellow-100 
-            font-bold py-2 px-4 m-0 rounded-lg hover:shadow-orange-700
+            font-bold py-1 px-3 m-0 rounded-lg hover:shadow-orange-700
              `}
             onClick={() => resetGame()}
           >
@@ -124,7 +126,7 @@ export default function Grids({ cards }: GridProps) {
             className={`
             mt-5 shadow-md shadow-blue-600 border-0 bg-blue-600
             hover:text-blue-900  hover:bg-orange-400 text-yellow-100
-            font-bold py-2 px-4 m-0 rounded-lg hover:shadow-orange-700
+            font-bold py-1 px-3 m-0 rounded-lg hover:shadow-orange-700
               `}
             onClick={handleHideAll}
           >
@@ -133,29 +135,35 @@ export default function Grids({ cards }: GridProps) {
         </div>
       </div>
 
-      <div className="gride w-screen p-2 bg-transparent">
+      <div className="gride w-screen p-1 bg-transparent">
         {stateCards.map((card) => {
           return <Card key={card.id} {...card} handleClick={handleClick} />;
         })}
       </div>
 
       {open && (
-        <div onClick={handleClose} className="fixed top-0 left-0 w-full h-full bg-blue-500 bg-opacity-60 flex justify-center items-center text-center">
+        <div
+          onClick={handleClose}
+          className="fixed top-0 left-0 w-full h-full bg-blue-500 bg-opacity-60 flex justify-center items-center text-center"
+        >
           <div className="bg-orange-500 font-bold p-8 rounded-lg shadow-xl shadow-blue-800">
-            <h1 className="text-3xl text-blue-800 font-extrabold mb-4">Jogo finalizado!</h1>
-            <p className="pt-4 mb-8 text-xl text-blue-800">Jogadas: <span className="text-white p-1">{moves}</span></p>
+            <h1 className="text-3xl text-blue-800 font-extrabold mb-4">
+              Jogo finalizado!
+            </h1>
+            <p className="pt-4 mb-8 text-xl text-blue-800">
+              Jogadas: <span className="text-white p-1">{moves}</span>
+            </p>
             <div className="flex justify-center align-middle content-center">
-            <button
-              className="bg-blue-600 font-bold shadow-blue-500 shadow-md text-white px-5 py-3 rounded-xl hover:bg-blue-900 hover:shadow-xl hover:shadow-blue-500"
-              onClick={handleClose}
-            >
-              Jogar novamente
-            </button>
+              <button
+                className="bg-blue-600 font-bold shadow-blue-500 shadow-md text-white px-5 py-3 rounded-xl hover:bg-blue-900 hover:shadow-xl hover:shadow-blue-500"
+                onClick={handleClose}
+              >
+                Jogar novamente
+              </button>
             </div>
           </div>
         </div>
       )}
-
     </>
   );
 }
