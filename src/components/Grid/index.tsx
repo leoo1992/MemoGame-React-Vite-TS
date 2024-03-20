@@ -104,7 +104,7 @@ export default function Grids({ cards }: GridProps) {
         >
           <p
             className="
-        text-game text-md text-blue-800 bg-orange-400 p-1 shadow-orange-500
+        text-game text-sm text-blue-800 bg-orange-400 p-1 shadow-orange-500
         rounded-lg shadow-md hover:shadow-blue-700 hover:bg-blue-700 hover:text-yellow-100
         "
           >
@@ -135,7 +135,7 @@ export default function Grids({ cards }: GridProps) {
         </div>
       </div>
 
-      <div className="gride w-screen p-1 bg-transparent">
+      <div className="gride w-screen p-1 bg-transparent flex-wrap">
         {stateCards.map((card) => {
           return <Card key={card.id} {...card} handleClick={handleClick} />;
         })}
