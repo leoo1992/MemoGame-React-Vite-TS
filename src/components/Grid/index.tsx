@@ -95,7 +95,7 @@ export default function Grids({ cards }: GridProps) {
   return (
     <>
       <div className="text-center font-bold p-0 m-0 ">
-        <div className="p-1 mt-5">
+        <div className="pb-1 mt-5 pt-5">
           <h1 className="text-3xl text-blue-800 m-0 p-0">Jogo da Memória</h1>
         </div>
         <div
@@ -135,7 +135,7 @@ export default function Grids({ cards }: GridProps) {
         </div>
       </div>
 
-      <div className="gride w-screen p-1 bg-transparent flex-wrap">
+      <div className="gride w-screen p-2 bg-transparent flex-wrap">
         {stateCards.map((card) => {
           return <Card key={card.id} {...card} handleClick={handleClick} />;
         })}
