@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Grids from "../../components/Grid";
 import { cards } from "../../data/cards";
+import '../../styles/App.css';
 
 export default function App() {
   useEffect(() => {

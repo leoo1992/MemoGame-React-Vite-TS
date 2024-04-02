@@ -95,7 +95,7 @@ export default function Grids({ cards }: GridProps) {
   return (
     <>
       <div className="text-center font-bold p-0 m-0 ">
-        <div className="p-1">
+        <div className="p-1 mt-2">
           <h1 className="text-3xl text-blue-800 m-0 p-0">Jogo da Memória</h1>
         </div>
         <div
