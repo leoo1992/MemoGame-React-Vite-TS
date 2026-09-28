@@ -1,20 +1,4 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.gride {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: .2rem;
-    max-width: 550px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-}
-
-.text-game {
-    width: 220px;
-    cursor: default;
-}
+.gride{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(4px,1.2vw,10px);width:min(94vw,620px);margin:auto;padding:clamp(12px,2vw,20px);border:1px solid rgba(23,32,51,.08);border-radius:28px;background:rgba(255,255,255,.64);box-shadow:0 24px 70px rgba(55,65,100,.14);backdrop-filter:blur(14px)}.text-game{width:min(220px,70vw);cursor:default}@media(max-width:520px){.gride{width:96vw;border-radius:20px;padding:8px;gap:4px}}
