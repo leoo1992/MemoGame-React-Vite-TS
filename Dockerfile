@@ -5,6 +5,7 @@ RUN npm install --no-audit --no-fund
 COPY . .
 RUN npm run build
 
-FROM nginx:1.27-alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
-EXPOSE 80
+FROM nginxinc/nginx-unprivileged:1.27-alpine
+COPY --from=builder --chown=101:101 /app/dist /usr/share/nginx/html
+USER 101
+EXPOSE 8080
